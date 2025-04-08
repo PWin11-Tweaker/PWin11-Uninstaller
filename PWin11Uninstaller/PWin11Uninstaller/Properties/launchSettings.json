@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PWin11Uninstaller (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PWin11Uninstaller (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

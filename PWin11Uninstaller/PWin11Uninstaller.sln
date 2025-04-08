@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWin11Uninstaller", "PWin11Uninstaller\PWin11Uninstaller.csproj", "{92055571-0431-4631-851A-29C6644F6A2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x64.ActiveCfg = Debug|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x64.Build.0 = Debug|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x64.Deploy.0 = Debug|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x86.ActiveCfg = Debug|x86
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x86.Build.0 = Debug|x86
+		{92055571-0431-4631-851A-29C6644F6A2E}.Debug|x86.Deploy.0 = Debug|x86
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|ARM64.Build.0 = Release|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|ARM64.Deploy.0 = Release|ARM64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x64.ActiveCfg = Release|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x64.Build.0 = Release|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x64.Deploy.0 = Release|x64
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x86.ActiveCfg = Release|x86
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x86.Build.0 = Release|x86
+		{92055571-0431-4631-851A-29C6644F6A2E}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CF1A17F-D95F-43FC-8012-13C67F2D4C3A}
+	EndGlobalSection
+EndGlobal
