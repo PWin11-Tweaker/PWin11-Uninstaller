@@ -11,8 +11,8 @@ namespace PWin11Uninstaller
 {
     public sealed partial class MainWindow : Window
     {
-        private ProgramInfo _lastUninstalledProgram;
-        private List<ProgramInfo> _allPrograms;
+        private ProgramInfo? _lastUninstalledProgram;
+        private List<ProgramInfo> _allPrograms = new List<ProgramInfo>(); // Инициализировали
 
         public MainWindow()
         {
@@ -23,16 +23,14 @@ namespace PWin11Uninstaller
         private void LoadInstalledPrograms()
         {
             _allPrograms = new List<ProgramInfo>();
-            var programSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase); // Для исключения дубликатов
+            var programSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-            // Список веток реестра для проверки
             var registryPaths = new[]
             {
-                @"Software\Microsoft\Windows\CurrentVersion\Uninstall", // Для всех пользователей (64-бит)
-                @"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall", // Для 32-битных программ на 64-битной системе
+                @"Software\Microsoft\Windows\CurrentVersion\Uninstall",
+                @"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall",
             };
 
-            // Проверяем ветки в HKEY_LOCAL_MACHINE
             foreach (var path in registryPaths)
             {
                 using (var key = Registry.LocalMachine.OpenSubKey(path))
@@ -66,7 +64,6 @@ namespace PWin11Uninstaller
                 }
             }
 
-            // Проверяем ветку в HKEY_CURRENT_USER
             using (var key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall"))
             {
                 if (key != null)
@@ -101,7 +98,7 @@ namespace PWin11Uninstaller
             ProgramsList.ItemsSource = _allPrograms;
         }
 
-        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchBox_TextChanged(object? sender, TextChangedEventArgs? e)
         {
             if (_allPrograms == null) return;
 
@@ -134,18 +131,25 @@ namespace PWin11Uninstaller
                     ProgressRing.IsActive = true;
                     ProgressText.Text = $"Удаление {program.Name}...";
 
-                    var process = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    var processInfo = new System.Diagnostics.ProcessStartInfo
                     {
                         FileName = "cmd.exe",
                         Arguments = $"/C {program.UninstallString}",
-                        UseShellExecute = true,
-                        CreateNoWindow = true
-                    });
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden
+                    };
 
-                    await Task.Run(() => process.WaitForExit());
+                    using (var process = new System.Diagnostics.Process { StartInfo = processInfo })
+                    {
+                        process.Start();
+                        await Task.Run(() => process.WaitForExit());
+                    }
 
                     _allPrograms.Remove(program);
-                    SearchBox_TextChanged(null, null);
+                    SearchBox_TextChanged(sender, null); 
 
                     ScanResidualsButton.IsEnabled = true;
                 }
@@ -182,21 +186,28 @@ namespace PWin11Uninstaller
                 {
                     ProgressText.Text = $"Удаление {program.Name}...";
 
-                    var process = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    var processInfo = new System.Diagnostics.ProcessStartInfo
                     {
                         FileName = "cmd.exe",
                         Arguments = $"/C {program.UninstallString}",
-                        UseShellExecute = true,
-                        CreateNoWindow = true
-                    });
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden
+                    };
 
-                    await Task.Run(() => process.WaitForExit());
+                    using (var process = new System.Diagnostics.Process { StartInfo = processInfo })
+                    {
+                        process.Start();
+                        await Task.Run(() => process.WaitForExit());
+                    }
 
                     _lastUninstalledProgram = program;
                     _allPrograms.Remove(program);
                 }
 
-                SearchBox_TextChanged(null, null);
+                SearchBox_TextChanged(sender, null); 
                 ScanResidualsButton.IsEnabled = true;
             }
             catch (Exception ex)
@@ -219,7 +230,7 @@ namespace PWin11Uninstaller
 
         private async void ScanResiduals_Click(object sender, RoutedEventArgs e)
         {
-            if (_lastUninstalledProgram == null) return;
+            if (_lastUninstalledProgram == null || _lastUninstalledProgram.Name == null) return;
 
             try
             {
@@ -276,7 +287,7 @@ namespace PWin11Uninstaller
             }
             catch (Exception)
             {
-                // Игнорируем ошибки доступа
+                
             }
             return residuals;
         }
@@ -316,7 +327,7 @@ namespace PWin11Uninstaller
             }
             catch (Exception)
             {
-                // Игнорируем ошибки доступа
+                
             }
             return residuals;
         }
@@ -382,7 +393,7 @@ namespace PWin11Uninstaller
             }
             catch (Exception)
             {
-                // Игнорируем ошибки доступа
+                
             }
         }
 
@@ -415,7 +426,7 @@ namespace PWin11Uninstaller
             }
             catch (Exception)
             {
-                // Игнорируем ошибки доступа
+                
             }
         }
     }
@@ -431,7 +442,7 @@ namespace PWin11Uninstaller
 
     public class ResidualItem
     {
-        public string Path { get; set; }
+        public string? Path { get; set; } 
         public bool IsRegistry { get; set; }
     }
 }
