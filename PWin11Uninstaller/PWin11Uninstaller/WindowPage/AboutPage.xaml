@@ -1,0 +1,51 @@
+<Page
+    x:Class="PWin11Uninstaller.WindowPage.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PWin11Uninstaller.WindowPage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+    
+    <Grid Margin="20">
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="0"
+               Source="/Assets/logo-png.png"
+               Height="150"
+               Width="150"
+               Margin="0,0,20,0"
+               VerticalAlignment="Top"/>
+
+        <StackPanel Grid.Column="1"
+                    VerticalAlignment="Top"
+                    Margin="0,0,0,0">
+
+            <TextBlock Text="PWin11 Uninstaller"
+                       FontSize="24"
+                       Margin="0,0,0,10"/>
+
+
+
+            <TextBlock Text="A utility for removing Windows programs and system applications"
+                       TextWrapping="Wrap"
+                       FontSize="16"
+                       Margin="0,0,0,20">
+            </TextBlock>
+
+            
+
+
+
+
+        </StackPanel>
+        
+    </Grid>
+</Page>
