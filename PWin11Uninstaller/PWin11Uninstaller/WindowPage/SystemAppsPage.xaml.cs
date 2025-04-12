@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using Windows.Management.Deployment;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Windows.Storage.Streams;
+using System.Diagnostics;
+using System.Security.Principal;
 
 namespace PWin11Uninstaller.WindowPage
 {
     public sealed partial class SystemAppsPage : Page
     {
         private List<SystemAppInfo> _systemApps = new List<SystemAppInfo>();
+        private SystemAppInfo? _edgeApp; // Для хранения информации о Microsoft Edge
 
         public SystemAppsPage()
         {
@@ -22,22 +25,28 @@ namespace PWin11Uninstaller.WindowPage
             LoadSystemApps();
         }
 
+        private bool IsRunningAsAdministrator()
+        {
+            using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+            {
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
+        }
+
         private async void LoadSystemApps()
         {
             _systemApps = new List<SystemAppInfo>();
             var packageManager = new PackageManager();
-            var packages = packageManager.FindPackagesForUser("").ToList(); // Преобразуем в список для подсчёта
+            var packages = packageManager.FindPackagesForUser("").ToList();
 
-            // Показываем прогресс-бар и анимацию
             ProgressOverlay.Visibility = Visibility.Visible;
             ProgressRing.IsActive = true;
             ProgressText.Text = "Сканирование приложений...";
 
-            // Запускаем анимацию затемнения
             var fadeInStoryboard = (Storyboard)Resources["FadeInOverlay"];
             fadeInStoryboard.Begin();
 
-            // Настраиваем ProgressBar
             ProgressBar.Maximum = packages.Count;
             ProgressBar.Value = 0;
 
@@ -55,19 +64,26 @@ namespace PWin11Uninstaller.WindowPage
                     if (string.IsNullOrEmpty(appInfo.Name))
                         continue;
 
-                    var logoUri = package.Logo;
-                    if (logoUri != null)
+                    // Проверяем, является ли приложение Microsoft Edge
+                    if (appInfo.Name.Contains("Microsoft Edge", StringComparison.OrdinalIgnoreCase))
                     {
-                        appInfo.IconSource = await LoadImageFromUri(logoUri);
+                        _edgeApp = appInfo;
+                        RemoveEdgeButton.IsEnabled = true; // Активируем кнопку
+                    }
+                    else
+                    {
+                        var logoUri = package.Logo;
+                        if (logoUri != null)
+                        {
+                            appInfo.IconSource = await LoadImageFromUri(logoUri);
+                        }
+
+                        _systemApps.Add(appInfo);
                     }
 
-                    _systemApps.Add(appInfo);
-
-                    // Обновляем прогресс
                     ProgressBar.Value += 1;
-                    ProgressText.Text = $"Обработано {_systemApps.Count} из {packages.Count} приложений...";
+                    ProgressText.Text = $"Обработано {_systemApps.Count + (_edgeApp != null ? 1 : 0)} из {packages.Count} приложений...";
 
-                    // Даём UI обновиться
                     await Task.Delay(1);
                 }
                 catch
@@ -79,7 +95,6 @@ namespace PWin11Uninstaller.WindowPage
             _systemApps.Sort((a, b) => string.Compare(a.Name, b.Name, StringComparison.OrdinalIgnoreCase));
             SystemAppsList.ItemsSource = _systemApps;
 
-            // Скрываем прогресс-бар с анимацией
             var fadeOutStoryboard = (Storyboard)Resources["FadeOutOverlay"];
             fadeOutStoryboard.Completed += (s, e) =>
             {
@@ -113,6 +128,98 @@ namespace PWin11Uninstaller.WindowPage
             catch
             {
                 return null;
+            }
+        }
+
+        private async void RemoveEdge_Click(object sender, RoutedEventArgs e)
+        {
+            if (_edgeApp == null) return;
+
+            if (!IsRunningAsAdministrator())
+            {
+                await new ContentDialog
+                {
+                    Title = "Ошибка",
+                    Content = "Для удаления Microsoft Edge требуются права администратора.",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                }.ShowAsync();
+                return;
+            }
+
+            ContentDialog confirmDialog = new ContentDialog
+            {
+                Title = "Подтверждение удаления",
+                Content = "Вы уверены, что хотите удалить Microsoft Edge? Это может повлиять на работу системы.",
+                PrimaryButtonText = "Да",
+                CloseButtonText = "Нет",
+                XamlRoot = this.XamlRoot
+            };
+
+            var result = await confirmDialog.ShowAsync();
+            if (result != ContentDialogResult.Primary)
+                return;
+
+            try
+            {
+                ProgressOverlay.Visibility = Visibility.Visible;
+                ProgressRing.IsActive = true;
+                ProgressText.Text = "Удаление Microsoft Edge...";
+                var fadeInStoryboard = (Storyboard)Resources["FadeInOverlay"];
+                fadeInStoryboard.Begin();
+
+                // Запускаем PowerShell для удаления Edge
+                ProcessStartInfo processInfo = new ProcessStartInfo
+                {
+                    FileName = "powershell.exe",
+                    Arguments = "-Command \"Get-AppxPackage *MicrosoftEdge* | Remove-AppxPackage\"",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                };
+
+                using (var process = new Process { StartInfo = processInfo })
+                {
+                    process.Start();
+                    await Task.Run(() => process.WaitForExit());
+
+                    if (process.ExitCode != 0)
+                    {
+                        string error = await process.StandardError.ReadToEndAsync();
+                        throw new Exception($"Ошибка PowerShell: {error}");
+                    }
+                }
+
+                // Удаляем Edge из списка (если он там был)
+                if (_edgeApp != null)
+                {
+                    _systemApps.Remove(_edgeApp);
+                    SystemAppsList.ItemsSource = _systemApps.ToList();
+                    _edgeApp = null;
+                    RemoveEdgeButton.IsEnabled = false; // Деактивируем кнопку
+                }
+            }
+            catch (Exception ex)
+            {
+                ContentDialog dialog = new ContentDialog
+                {
+                    Title = "Ошибка",
+                    Content = $"Не удалось удалить Microsoft Edge: {ex.Message}",
+                    CloseButtonText = "OK",
+                    XamlRoot = this.XamlRoot
+                };
+                await dialog.ShowAsync();
+            }
+            finally
+            {
+                var fadeOutStoryboard = (Storyboard)Resources["FadeOutOverlay"];
+                fadeOutStoryboard.Completed += (s, e) =>
+                {
+                    ProgressOverlay.Visibility = Visibility.Collapsed;
+                };
+                fadeOutStoryboard.Begin();
+                ProgressRing.IsActive = false;
             }
         }
 

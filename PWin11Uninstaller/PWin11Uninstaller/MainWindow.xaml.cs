@@ -7,6 +7,7 @@ using Microsoft.UI;
 using System;
 using WinRT.Interop;
 
+
 namespace PWin11Uninstaller
 {
     public sealed partial class MainWindow : Window
@@ -28,6 +29,8 @@ namespace PWin11Uninstaller
 
 
         }
+
+
 
         private AppWindow GetAppWindowForCurrentWindow()
         {

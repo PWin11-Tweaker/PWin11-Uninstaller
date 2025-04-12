@@ -48,7 +48,10 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="UninstallSelectedButton" Content="Удалить выбранные" Click="UninstallSelected_Click" Grid.Row="2" Margin="10"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <Button x:Name="UninstallSelectedButton" Content="Удалить выбранные" Click="UninstallSelected_Click" Style="{StaticResource AccentButtonStyle}"/>
+            <Button x:Name="RemoveEdgeButton" Content="Удалить Microsoft Edge" Click="RemoveEdge_Click" Margin="10,0,0,0" IsEnabled="False"/>
+        </StackPanel>
 
         <Grid x:Name="ProgressOverlay" Background="#80000000" Visibility="Collapsed" Grid.Row="0" Grid.RowSpan="3" Opacity="0">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
