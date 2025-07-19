@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\systemappspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\systemappspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\systemappspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\systemappspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,20 +11,23 @@
       "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|c:\\users\\ph1ncyn\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250606001\\include\\mddbootstrapautoinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\systemappspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\systemappspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\systemappspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\systemappspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\aboutpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|d:\\.project-new-git\\pwin11-unistaller\\pwin11uninstaller\\pwin11uninstaller\\windowpage\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92055571-0431-4631-851A-29C6644F6A2E}|PWin11Uninstaller\\PWin11Uninstaller.csproj|solutionrelative:pwin11uninstaller\\windowpage\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,15 +49,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AboutPage.xaml.cs",
-              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
-              "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
-              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
-              "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MddBootstrapAutoInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\ph1ncyn\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250606001\\include\\MddBootstrapAutoInitializer.cs",
+              "ToolTip": "C:\\Users\\ph1ncyn\\.nuget\\packages\\microsoft.windowsappsdk\\1.7.250606001\\include\\MddBootstrapAutoInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:06:47.982Z"
+              "WhenOpened": "2025-07-19T15:56:48.447Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,91 +73,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SystemAppsPage.xaml.cs",
               "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml.cs",
               "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml.cs",
               "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml.cs",
               "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8BAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T12:06:31.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "SystemAppsPage.xaml",
               "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml",
               "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml",
               "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml",
               "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\SystemAppsPage.xaml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwD8AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwC8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-10T12:06:24.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\MainPage.xaml.cs",
-              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\MainPage.xaml.cs",
-              "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAsCAAAAAAAAAAAUwBQCAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:05:35.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\MainPage.xaml",
-              "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\MainPage.xaml",
-              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\MainPage.xaml",
-              "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "PWin11Uninstaller\\MainWindow.xaml",
+              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml",
+              "RelativeToolTip": "PWin11Uninstaller\\MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-10T12:04:56.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\App.xaml.cs",
-              "RelativeDocumentMoniker": "PWin11Uninstaller\\App.xaml.cs",
-              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\App.xaml.cs",
-              "RelativeToolTip": "PWin11Uninstaller\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T11:46:04.981Z",
+              "WhenOpened": "2025-07-19T15:52:38.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "PWin11Uninstaller\\MainWindow.xaml.cs",
               "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml.cs",
               "RelativeToolTip": "PWin11Uninstaller\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T11:20:31.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "PWin11Uninstaller\\MainWindow.xaml",
-              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\MainWindow.xaml",
-              "RelativeToolTip": "PWin11Uninstaller\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-08T11:17:03.918Z",
+              "DocumentIndex": 6,
+              "Title": "AboutPage.xaml.cs",
+              "DocumentMoniker": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
+              "RelativeDocumentMoniker": "PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
+              "ToolTip": "D:\\.project-new-git\\PWin11-Unistaller\\PWin11Uninstaller\\PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
+              "RelativeToolTip": "PWin11Uninstaller\\WindowPage\\AboutPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T12:06:47.982Z",
               "EditorCaption": ""
             }
           ]

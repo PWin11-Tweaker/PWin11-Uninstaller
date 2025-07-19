@@ -5,27 +5,48 @@
     xmlns:local="using:PWin11Uninstaller"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    >
+    mc:Ignorable="d">
 
-    <NavigationView x:Name="NavView" IsBackButtonVisible="Collapsed" SelectionChanged="NavView_SelectionChanged">
-        <NavigationView.MenuItems>
-            <NavigationViewItem Content="Все программы" Tag="MainPage">
-                <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="AllApps"/>
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-            <NavigationViewItem Content="Системные приложения" Tag="SystemAppsPage">
-                <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="Setting"/>
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-            <NavigationViewItem Content="О программе" Tag="AboutPage">
-                <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="Help"/>
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-        </NavigationView.MenuItems>
-        <Frame x:Name="ContentFrame"/>
-    </NavigationView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Для TitleBar -->
+            <RowDefinition Height="*"/>
+            <!-- Для NavigationView -->
+        </Grid.RowDefinitions>
+
+        <!-- Кастомный TitleBar -->
+        <TitleBar x:Name="SimpleTitleBar"
+                  Title="PWin11 Uninstaller"
+                  Grid.Row="0">
+            <TitleBar.IconSource>
+                <ImageIconSource ImageSource="/Assets/icon.png" />
+            </TitleBar.IconSource>
+        </TitleBar>
+
+        <!-- NavigationView -->
+        <NavigationView x:Name="NavView" 
+                        IsBackButtonVisible="Collapsed" 
+                        SelectionChanged="NavView_SelectionChanged"
+                        Grid.Row="1">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Все программы" Tag="MainPage">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="AllApps"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Системные приложения" Tag="SystemAppsPage">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Setting"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="О программе" Tag="AboutPage">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Help"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame"/>
+        </NavigationView>
+    </Grid>
 </Window>

@@ -1,10 +1,8 @@
 ﻿using Microsoft.UI.Xaml;
 using System.Security.Principal;
 
-
 namespace PWin11Uninstaller
 {
-
     public partial class App : Application
     {
         public App()
